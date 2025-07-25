@@ -1,0 +1,731 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>SQL实战闯关练习 | MooSe的小窝</title><meta name="author" content="MooSe"><meta name="copyright" content="MooSe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#18171d"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="SQL实战闯关练习"><meta name="application-name" content="SQL实战闯关练习"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#18171d"><meta property="og:type" content="article"><meta property="og:title" content="SQL实战闯关练习"><meta property="og:url" content="http://example.com/2025/07/23/SQL%E5%AE%9E%E6%88%98%E9%97%AF%E5%85%B3%E7%BB%83%E4%B9%A0/index.html"><meta property="og:site_name" content="MooSe的小窝"><meta property="og:description" content="SQL实战闯关练习前沿：SQL（Structured Query Language）是一种用于管理、操作和查询数据库的标准化语言，被广泛应用于各种类型的数据库，如 MySQL、PostgreSQL、Oracle、Microsoft SQL Server 等，是程序员必备的基础技能之一。   纯前端实"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/MooSeQAQ/tuchuang@main/img/moose.jpg"><meta property="article:author" content="MooSe"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/MooSeQAQ/tuchuang@main/img/moose.jpg"><meta name="description" content="SQL实战闯关练习前沿：SQL（Structured Query Language）是一种用于管理、操作和查询数据库的标准化语言，被广泛应用于各种类型的数据库，如 MySQL、PostgreSQL、Oracle、Microsoft SQL Server 等，是程序员必备的基础技能之一。   纯前端实"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/2025/07/23/SQL%E5%AE%9E%E6%88%98%E9%97%AF%E5%85%B3%E7%BB%83%E4%B9%A0/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":"ture","title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏃 脚踏实地行动派","🧱 团队小组发动机"]},
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    simplehomepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: MooSe","link":"链接: ","source":"来源: MooSe的小窝","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: {"enable":"ture","delay":100,"shiftDelay":200},
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'MooSe的小窝',
+  title: 'SQL实战闯关练习',
+  postAI: '',
+  pageFillDescription: 'SQL实战闯关练习, 主线关卡, 1-基础语法-查询-全表查询, 2-基础语法-查询-选择查询, 3-基础语法-查询-别名, 4-基础语法-查询-常量和运算, 5-基础语法-条件查询-where, 6-基础语法-条件查询-运算符, 7-基础语法-条件查询-空值, 8-基础语法-条件查询-模糊查询, 9-基础语法-条件查询-逻辑查询, 10-基础语法-去重-distinct, 11-基础语法-排序, 12-基础语法-截断和偏移, 13-基础语法-条件分支, 14-函数-时间函数, 15-函数-字符串处理, 16-函数-聚合函数, 17-分组聚合-单子段分组, 18-分组聚合-多字段分组, 19-分组聚合-having子句, 20-查询进阶-关联查询-cross join, 21-查询进阶-关联查询-inner join, 22-查询进阶-关联查询-outer join, 23-查询进阶-子查询, 24-查询进阶-子查询-exists, 25-查询进阶-组合查询实战闯关练习前沿是一种用于管理操作和查询数据库的标准化语言被广泛应用于各种类型的数据库如等是程序员必备的基础技能之一纯前端实现的闯关式自学网程序员鱼皮一人全役主线关卡基础语法查询全表查询查询语句表示全表查询即获取表内所有数据并打印基础语法查询选择查询例如要查询和这两列数据查询语句基础语法查询别名我们可以用创建别名即打印表格显示的列名查询语句学生姓名基础语法查询常量和运算在中常量可以之直接作为列名但要记得加上单引号常量同时可以进行基础运算如基础语法条件查询选择查询时得到的时整列的数据那么当我们希望只截取其中部分数据时就可以用语句进行条件查询只有满足我们条件的才会被返回输出查询语句基础语法条件查询运算符同样是用语句进行筛选过滤只不过可以用运算符如等查询语句小李基础语法条件查询空值灵活运用和来构造条件查询语句基础语法条件查询模糊查询模糊查询可以用来检索符合条件的数据可以用关键字来实现在模糊查询中用通配符来表示零个或多个字符百分号表示任意长度的任意字符序列下划线表示任意单个字符例如我们用模糊查询来查找中含有关键字张的学生信息查询语句张还可以查询符合关键字开头或结尾的数据查询语句只查询以张开头的数据行张只查询以张结尾的数据行张同样的也可以用来查询不包含关键字的数据查询语句张基础语法条件查询逻辑查询逻辑运算允许我们使用多个条件来筛选数据常用的运算符有表示逻辑与要求同时满足多个条件才返回表示逻辑或要求满足其中任意一个条件就返回表示逻辑非用于否定一个条件本来是用了后转为例如用逻辑与运算查询语句如下张基础语法去重有时候数据表中可能存在重复的记录这时候就可以用关键字来过滤重复项只保留不同的记录即去重举个例子用找出不同的班级查询语句除了按单字段去重关键字还支持多个字段的组合去重确保多个字段的组合是唯一的语法字段字段字段例如选择出所有不重复的和的组合查询语句基础语法排序一般和搭配使用升序降序查询语句则按照年龄升序从小到大张三王五李四赵六基础语法截断和偏移用关键字进行截断只获取我们需要的长度请编写一条查询语句从名为的数据表中选择学生姓名和年龄按照年龄从小到大排序从第条数据开始截取个学生的信息查询语句注后第一个数字表示起始下标第条第二个数字表示一次截取多少行基础语法条件分支条件分支类似于对某个列进行条件对比并把结果存储到新的列中如法如下条件结果条件结果其他结果举个例子吧比较形象一点假设有一个学生表包含以下字段姓名年龄请你编写一个查询将学生按照年龄划分为三个年龄等级岁以上为老同学岁以上不包括岁以上为年轻岁及以下以及没有年龄信息为小同学返回结果应包含学生的姓名和年龄等级并按姓名升序排序查询语句老同学年轻小同学函数时间函数几个常用的时间函数获取当前日期获取当前日期时间获取当前时间获取当前日期获取当前日期时间获取当前时间查询语句当前日期函数字符串处理我们可以用特定的函数对字符串进行处理常用的有转大写转小写求字符串长度假设有一个学生表包含以下字段学号姓名请你编写一个查询筛选出姓名为热的学生展示其学号姓名及其大写姓名查询语句热函数聚合函数在中聚合函数是对数据集进行汇总计算的特殊函数可以进行如计数求和平均值最大值和最小值等操作通常在语句中配合使用常见的聚合函数包括计算指定列的行数或非空值的数量计算指定列的数值之和计算指定列的数值平均值找出指定列的最大值找出指定列的最小值示例假设有一个订单表包含以下字段订单号客户编号订单金额数据如下使用聚合函数计算订单表中的总订单数查询结果使用聚合函数列名计算订单表中不同客户的数量查询结果使用聚合函数计算总订单金额查询结果题目假设有一个学生表包含以下字段学号姓名班级编号成绩请你编写一个查询汇总学生表中所有学生的总成绩平均成绩最高成绩和最低成绩查询语句分组聚合单子段分组通常用关键字对数据分组相当于是以什么为单位进行筛选查询语句分组聚合多字段分组还是用关键字只不过改成了个变量或两个以上的排列组合假设有一个订单表包含以下字段订单号商品编号客户编号订单金额数据如下要查询使用多字段分组查询表中每个客户购买的每种商品的总金额相当于按照客户编号和商品编号分组查询每个用户购买的每种商品的总金额按照客户编号和商品编号分组查询结果分组聚合子句子句用于在分组聚合之后对分组进行条件过滤和的区别在于是在分组前过滤而用于在分组后过滤查询语句查询进阶关联查询是一种简单的关联查询不需要任何条件来匹配行它直接将左表的每一行与右表的每一行进行组合返回的结果是两个表的笛卡尔积假设有一个学生表包含以下字段学号姓名年龄班级编号还有一个班级表包含以下字段班级编号班级名称请你编写一个查询将学生表和班级表的所有行组合在一起并返回学生姓名学生年龄班级编号以及班级名称查询语句查询进阶关联查询与不同只返回两个表中满足关联条件的交集部分使用进行关联查询根据员工表和部门表之间的公共字段部门名称进行匹配将员工的姓名工资以及所属部门和部门经理组合在一起查询进阶关联查询分为和允许将两个表中满足条件的行组合在一起并包含没有匹配的行赋值为查询进阶子查询子查询就是嵌套查询示例如下假设有一个学生表包含以下字段学号姓名年龄分数班级编号还有一个班级表包含以下字段班级编号班级名称请编写一个查询使用子查询的方式来获取存在对应班级的学生的所有数据返回学生姓名分数班级编号字段查询进阶子查询子查询中的一种特殊类型是子查询用于检查主查询的结果集是否存在满足条件的记录它返回布尔值或而不返回实际的数据假设有一个学生表包含以下字段学号姓名年龄分数班级编号还有一个班级表包含以下字段班级编号班级名称请编写一个查询使用子查询的方式来获取不存在对应班级的学生的所有数据返回学生姓名年龄班级编号字段查询进阶组合查询组合查询是一种将多个查询结果合并在一起的查询操作包括两种常见的组合查询操作和操作它用于将两个或多个查询的结果集合并并去除重复的行即如果两个查询的结果有相同的行则只保留一行操作它也用于将两个或多个查询的结果集合并但不去除重复的行即如果两个查询的结果有相同的行则全部保留操作',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-07-25 10:37:37',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://cdn.jsdelivr.net/gh/MooSeQAQ/tuchuang@main/img/studyinging.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">MooSe的小窝</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 留言板</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 随便逛逛</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CTF-Web/" style="font-size: 1.05rem;">CTF-Web<sup>1</sup></a><a href="/tags/Docker%E5%A4%8D%E7%8E%B0/" style="font-size: 1.05rem;">Docker复现<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>1</sup></a><a href="/tags/Web-SSRF/" style="font-size: 1.05rem;">Web-SSRF<sup>1</sup></a><a href="/tags/Web-awd/" style="font-size: 1.05rem;">Web-awd<sup>1</sup></a><a href="/tags/Web-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/" style="font-size: 1.05rem;">Web-文件包含<sup>1</sup></a><a href="/tags/ctfshow/" style="font-size: 1.05rem;">ctfshow<sup>2</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.05rem;">前端<sup>2</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.05rem;">数据库<sup>1</sup></a><a href="/tags/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/" style="font-size: 1.05rem;">文件包含<sup>1</sup></a><a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 1.05rem;">比赛<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/05/"><span class="card-archive-list-date">五月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">8</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div><div class="console-btn-item" id="consoleKeyboard" onclick="anzhiyu.keyboardToggle()" title="快捷键开关"><a class="keyboard-switch"><i class="anzhiyufont anzhiyu-icon-keyboard"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"></span></div></div><h1 class="post-title" itemprop="name headline">SQL实战闯关练习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-07-23T07:06:15.000Z" title="发表于 2025-07-23 15:06:15">2025-07-23</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-07-25T02:37:37.437Z" title="更新于 2025-07-25 10:37:37">2025-07-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="SQL实战闯关练习"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为浙江"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>浙江</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2025/07/23/SQL%E5%AE%9E%E6%88%98%E9%97%AF%E5%85%B3%E7%BB%83%E4%B9%A0/"><header><h1 id="CrawlerTitle" itemprop="name headline">SQL实战闯关练习</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">MooSe</span><time itemprop="dateCreated datePublished" datetime="2025-07-23T07:06:15.000Z" title="发表于 2025-07-23 15:06:15">2025-07-23</time><time itemprop="dateCreated datePublished" datetime="2025-07-25T02:37:37.437Z" title="更新于 2025-07-25 10:37:37">2025-07-25</time></header><h1 id="SQL实战闯关练习"><a href="#SQL实战闯关练习" class="headerlink" title="SQL实战闯关练习"></a>SQL实战闯关练习</h1><p>前沿：SQL（Structured Query Language）是一种用于管理、操作和查询数据库的<strong>标准化语言</strong>，被广泛应用于各种类型的数据库，如 MySQL、PostgreSQL、Oracle、Microsoft SQL Server 等，是程序员必备的基础技能之一。</p>
+<blockquote>
+<p> 纯前端实现的闯关式 SQL 自学网(<a target="_blank" rel="noopener" href="https://github.com/liyupi/sql-mother">https://github.com/liyupi/sql-mother</a>)</p>
+<p> By <a target="_blank" rel="noopener" href="https://docs.qq.com/doc/DUFFRVWladXVjeUxW">程序员鱼皮</a> ，一人全役</p>
+</blockquote>
+<h2 id="主线关卡"><a href="#主线关卡" class="headerlink" title="主线关卡"></a>主线关卡</h2><h3 id="1-基础语法-查询-全表查询"><a href="#1-基础语法-查询-全表查询" class="headerlink" title="1-基础语法-查询-全表查询"></a>1-基础语法-查询-全表查询</h3><p>SQL 查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> student;</span><br></pre></td></tr></table></figure>
+
+<p><code>*</code>表示全表查询，即获取表内所有数据并打印</p>
+<h3 id="2-基础语法-查询-选择查询"><a href="#2-基础语法-查询-选择查询" class="headerlink" title="2-基础语法-查询-选择查询"></a>2-基础语法-查询-选择查询</h3><p>例如要查询<code>name</code>和<code>age</code>这两列数据</p>
+<p>SQL 查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name,age <span class="keyword">from</span> student;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-基础语法-查询-别名"><a href="#3-基础语法-查询-别名" class="headerlink" title="3-基础语法-查询-别名"></a>3-基础语法-查询-别名</h3><p>我们可以用<code>as</code>创建别名，即打印表格显示的列名</p>
+<p>SQL 查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name <span class="keyword">as</span> 学生姓名 <span class="keyword">from</span> student;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-基础语法-查询-常量和运算"><a href="#4-基础语法-查询-常量和运算" class="headerlink" title="4-基础语法-查询-常量和运算"></a>4-基础语法-查询-常量和运算</h3><p>在SQL中，常量可以之&#x3D;直接作为列名，但要记得加上单引号<code>&#39;常量&#39;</code>，同时可以进行基础运算如<code>+</code>、<code>-</code>、<code>*</code>、<code>/</code></p>
+<h3 id="5-基础语法-条件查询-where"><a href="#5-基础语法-条件查询-where" class="headerlink" title="5-基础语法-条件查询-where"></a>5-基础语法-条件查询-where</h3><p>选择查询时得到的时整列的数据，那么当我们希望只截取其中部分数据时，就可以用<code>where语句</code>进行条件查询，只有满足我们条件的才会被返回输出</p>
+<p>SQL 查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name <span class="keyword">from</span> student <span class="keyword">where</span> age <span class="operator">&gt;</span><span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-基础语法-条件查询-运算符"><a href="#6-基础语法-条件查询-运算符" class="headerlink" title="6-基础语法-条件查询-运算符"></a>6-基础语法-条件查询-运算符</h3><p>同样是用where语句进行筛选过滤，只不过可以用运算符如 <code>=</code>、 <code>!=</code>、<code>&lt;</code>、<code>&gt;</code> 等</p>
+<p>SQL 查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name <span class="keyword">from</span> student <span class="keyword">where</span> name<span class="operator">!=</span><span class="string">&#x27;小李&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-基础语法-条件查询-空值"><a href="#7-基础语法-条件查询-空值" class="headerlink" title="7-基础语法-条件查询-空值"></a>7-基础语法-条件查询-空值</h3><ul>
+<li>灵活运用<code>is null</code>和<code>is not null</code>来构造条件</li>
+</ul>
+<p>SQL 查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name,age <span class="keyword">from</span> student <span class="keyword">where</span> score <span class="keyword">is</span> <span class="keyword">null</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-基础语法-条件查询-模糊查询"><a href="#8-基础语法-条件查询-模糊查询" class="headerlink" title="8-基础语法-条件查询-模糊查询"></a>8-基础语法-条件查询-模糊查询</h3><p>模糊查询可以用来检索符合条件的数据，可以用<code>like</code>关键字来实现</p>
+<p>在like模糊查询中，用通配符来表示零个或多个字符：</p>
+<ul>
+<li>百分号（%）：表示任意长度的任意字符序列。</li>
+<li>下划线（_）：表示任意单个字符。</li>
+</ul>
+<ol>
+<li>例如，我们用like模糊查询来查找name中含有关键字“张”的学生信息:</li>
+</ol>
+<p>SQL 查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name,age <span class="keyword">from</span> student <span class="keyword">where</span> name <span class="keyword">like</span> <span class="string">&#x27;%张%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>还可以查询符合关键字开头或结尾的数据：</li>
+</ol>
+<p>SQL 查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 只查询以 &quot;张&quot; 开头的数据行</span></span><br><span class="line"><span class="keyword">select</span> name,age <span class="keyword">from</span> student <span class="keyword">where</span> name <span class="keyword">like</span> <span class="string">&#x27;张%&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 只查询以 &quot;张&quot; 结尾的数据行</span></span><br><span class="line"><span class="keyword">select</span> name,age <span class="keyword">from</span> student <span class="keyword">where</span> name <span class="keyword">like</span> <span class="string">&#x27;%张&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>同样的，也可以用<code>not like</code>来查询不包含关键字的数据</li>
+</ol>
+<p>SQL 查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name,age <span class="keyword">from</span> student <span class="keyword">where</span> name <span class="keyword">not</span> <span class="keyword">like</span> <span class="string">&#x27;%张%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-基础语法-条件查询-逻辑查询"><a href="#9-基础语法-条件查询-逻辑查询" class="headerlink" title="9-基础语法-条件查询-逻辑查询"></a>9-基础语法-条件查询-逻辑查询</h3><p>逻辑运算允许我们使用多个条件来筛选数据，常用的运算符有：</p>
+<ul>
+<li>AND：表示逻辑与，要求同时满足多个条件，才返回 true。</li>
+<li>OR：表示逻辑或，要求满足其中任意一个条件，就返回 true。</li>
+<li>NOT：表示逻辑非，用于否定一个条件（本来是 true，用了 not 后转为 false）</li>
+</ul>
+<p>例如用<code>and逻辑与</code>运算，SQL 查询语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name,age <span class="keyword">from</span> student <span class="keyword">where</span> name <span class="keyword">not</span> <span class="keyword">like</span> <span class="string">&#x27;%张%&#x27;</span> <span class="keyword">and</span> age <span class="operator">&gt;</span><span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-基础语法-去重-distinct"><a href="#10-基础语法-去重-distinct" class="headerlink" title="10-基础语法-去重-distinct"></a>10-基础语法-去重-distinct</h3><blockquote>
+<p>有时候数据表中可能存在重复的记录，这时候就可以用<code>distinct关键字</code>来过滤重复项，只保留不同的记录，即去重</p>
+</blockquote>
+<p>举个例子，用distinct找出不同的班级id</p>
+<p>SQL查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> class_id <span class="keyword">from</span> students;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>除了按单字段去重，distinct关键字还支持多个字段的组合去重，确保多个字段的组合是唯一的，语法:<code>distinct 字段1, 字段2, 字段3, ...</code></li>
+</ul>
+<p>例如，选择出所有不重复的class_id和exam_num的组合，SQL查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> class_id,exam_num <span class="keyword">from</span> student;</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-基础语法-排序"><a href="#11-基础语法-排序" class="headerlink" title="11-基础语法-排序"></a>11-基础语法-排序</h3><p>一般和<code>order by</code>搭配使用</p>
+<ul>
+<li>升序：<code>asc</code></li>
+<li>降序：<code>desc</code></li>
+</ul>
+<p>SQL查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name, age <span class="keyword">from</span> students <span class="keyword">order</span> <span class="keyword">by</span> age <span class="keyword">asc</span>;</span><br></pre></td></tr></table></figure>
+
+<p>则按照年龄<strong>升序</strong>（从小到大）：</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>张三</td>
+<td>18</td>
+</tr>
+<tr>
+<td>王五</td>
+<td>19</td>
+</tr>
+<tr>
+<td>李四</td>
+<td>20</td>
+</tr>
+<tr>
+<td>赵六</td>
+<td>20</td>
+</tr>
+</tbody></table>
+<h3 id="12-基础语法-截断和偏移"><a href="#12-基础语法-截断和偏移" class="headerlink" title="12-基础语法-截断和偏移"></a>12-基础语法-截断和偏移</h3><ul>
+<li>用<code>limit关键字</code>进行截断，只获取我们需要的长度</li>
+</ul>
+<blockquote>
+<p>请编写一条 SQL 查询语句，从名为 <code>students</code> 的数据表中选择学生姓名（name）和年龄（age），按照年龄从小到大排序，从第 2 条数据开始、截取 3 个学生的信息。</p>
+</blockquote>
+<p>SQL查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name, age <span class="keyword">from</span> students <span class="keyword">order</span> <span class="keyword">by</span> age <span class="keyword">asc</span> limit <span class="number">1</span>,<span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+
+<p>注：<code>limit</code>后第一个数字表示起始下标2（<strong>第3条</strong>），第二个数字表示一次截取多少行</p>
+<h3 id="13-基础语法-条件分支"><a href="#13-基础语法-条件分支" class="headerlink" title="13-基础语法-条件分支"></a>13-基础语法-条件分支</h3><p>条件分支<code>case when</code>类似于<code>if else</code>，对某个列进行条件对比，并把结果存储到新的列中，如法如下</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CASE</span> <span class="keyword">WHEN</span> (条件<span class="number">1</span>) <span class="keyword">THEN</span> 结果<span class="number">1</span></span><br><span class="line">	   <span class="keyword">WHEN</span> (条件<span class="number">2</span>) <span class="keyword">THEN</span> 结果<span class="number">2</span></span><br><span class="line">	   ...</span><br><span class="line">	   <span class="keyword">ELSE</span> 其他结果 <span class="keyword">END</span></span><br></pre></td></tr></table></figure>
+
+<p>举个例子吧，比较形象一点</p>
+<blockquote>
+<p>假设有一个学生表 <code>student</code>，包含以下字段：<code>name</code>（姓名）、<code>age</code>（年龄）。请你编写一个 SQL 查询，将学生按照年龄划分为三个年龄等级（age_level）：60 岁以上为 “老同学”，20 岁以上（不包括 60 岁以上）为 “年轻”，20 岁及以下、以及没有年龄信息为 “小同学”。</p>
+<p>返回结果应包含学生的姓名（name）和年龄等级（age_level），并按姓名升序排序。</p>
+</blockquote>
+<p>SQL查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name,<span class="keyword">case</span> <span class="keyword">when</span> ( age <span class="operator">&gt;</span><span class="number">60</span> ) <span class="keyword">then</span> <span class="string">&#x27;老同学&#x27;</span> </span><br><span class="line"> <span class="keyword">when</span> (age <span class="operator">&gt;</span><span class="number">20</span>) <span class="keyword">then</span> <span class="string">&#x27;年轻&#x27;</span></span><br><span class="line"><span class="keyword">else</span> <span class="string">&#x27;小同学&#x27;</span> <span class="keyword">end</span> <span class="keyword">as</span> age_level </span><br><span class="line"><span class="keyword">from</span> student <span class="keyword">order</span> <span class="keyword">by</span> name <span class="keyword">asc</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="14-函数-时间函数"><a href="#14-函数-时间函数" class="headerlink" title="14-函数-时间函数"></a>14-函数-时间函数</h3><p>几个常用的时间函数：</p>
+<ul>
+<li>DATE：获取当前日期</li>
+<li>DATETIME：获取当前日期时间</li>
+<li>TIME：获取当前时间</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 获取当前日期</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="type">DATE</span>() <span class="keyword">AS</span> <span class="built_in">current_date</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 获取当前日期时间</span></span><br><span class="line"><span class="keyword">SELECT</span> DATETIME() <span class="keyword">AS</span> current_datetime;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 获取当前时间</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="type">TIME</span>() <span class="keyword">AS</span> <span class="built_in">current_time</span>;</span><br></pre></td></tr></table></figure>
+
+<p>SQL查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name, <span class="type">date</span>() <span class="keyword">as</span> 当前日期 <span class="keyword">from</span> student</span><br></pre></td></tr></table></figure>
+
+<h3 id="15-函数-字符串处理"><a href="#15-函数-字符串处理" class="headerlink" title="15-函数-字符串处理"></a>15-函数-字符串处理</h3><p>我们可以用特定的函数对字符串进行处理，常用的有：</p>
+<ul>
+<li>upper：转大写</li>
+<li>lower：转小写</li>
+<li>length：求字符串长度</li>
+</ul>
+<blockquote>
+<p>假设有一个学生表 <code>student</code>，包含以下字段：<code>id</code>（学号）、<code>name</code>（姓名）。请你编写一个 SQL 查询，筛选出姓名为 ‘热dog’ 的学生，展示其学号（id）、姓名（name）及其大写姓名（upper_name）。</p>
+</blockquote>
+<p>SQL查询语句：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id,name,upper(name) as upper_name from student where name = &#x27;热dog&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="16-函数-聚合函数"><a href="#16-函数-聚合函数" class="headerlink" title="16-函数-聚合函数"></a>16-函数-聚合函数</h3><p>在 SQL 中，聚合函数是对数据集进行 <strong>汇总计算</strong> 的特殊函数。可以进行如计数、求和、平均值、最大值和最小值等操作，通常在 SELECT 语句中配合 <code>group by</code>使用</p>
+<p>常见的聚合函数包括：</p>
+<ul>
+<li>COUNT：计算指定列的行数或非空值的数量。</li>
+<li>SUM：计算指定列的数值之和。</li>
+<li>AVG：计算指定列的数值平均值。</li>
+<li>MAX：找出指定列的最大值。</li>
+<li>MIN：找出指定列的最小值。</li>
+</ul>
+<p>示例</p>
+<p>假设有一个订单表 <code>orders</code>，包含以下字段：<code>order_id</code>（订单号）、<code>customer_id</code>（客户编号）、<code>amount</code>（订单金额）。数据如下：</p>
+<table>
+<thead>
+<tr>
+<th>order_id</th>
+<th>customer_id</th>
+<th>amount</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>A001</td>
+<td>100</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A002</td>
+<td>200</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A001</td>
+<td>150</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A003</td>
+<td>50</td>
+</tr>
+</tbody></table>
+<p>1）使用聚合函数 <code>COUNT</code> 计算订单表中的总订单数：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> order_num</span><br><span class="line"><span class="keyword">FROM</span> orders;</span><br></pre></td></tr></table></figure>
+
+<p>查询结果：</p>
+<table>
+<thead>
+<tr>
+<th>order_num</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4</td>
+</tr>
+</tbody></table>
+<p>2）使用聚合函数 <code>COUNT(DISTINCT 列名)</code> 计算订单表中不同客户的数量：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="keyword">DISTINCT</span> customer_id) <span class="keyword">AS</span> customer_num</span><br><span class="line"><span class="keyword">FROM</span> orders;</span><br></pre></td></tr></table></figure>
+
+<p>查询结果：</p>
+<table>
+<thead>
+<tr>
+<th>customer_num</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3</td>
+</tr>
+</tbody></table>
+<p>3）使用聚合函数 <code>SUM</code> 计算总订单金额：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">SUM</span>(amount) <span class="keyword">AS</span> total_amount</span><br><span class="line"><span class="keyword">FROM</span> orders;</span><br></pre></td></tr></table></figure>
+
+<p>查询结果：</p>
+<table>
+<thead>
+<tr>
+<th>total_amount</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>500</td>
+</tr>
+</tbody></table>
+<p><strong>题目</strong></p>
+<p>假设有一个学生表 <code>student</code>，包含以下字段：<code>id</code>（学号）、<code>name</code>（姓名）、<code>class_id</code>（班级编号）、<code>score</code>（成绩）。请你编写一个 SQL 查询，汇总学生表中所有学生的总成绩（total_score）、平均成绩（avg_score）、最高成绩（max_score）和最低成绩（min_score）。</p>
+<p>SQL查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">  <span class="built_in">SUM</span>(score) <span class="keyword">AS</span> total_score,</span><br><span class="line">  <span class="built_in">AVG</span>(score) <span class="keyword">AS</span> avg_score,</span><br><span class="line">  <span class="built_in">MAX</span>(score) <span class="keyword">AS</span> max_score,</span><br><span class="line">  <span class="built_in">MIN</span>(score) <span class="keyword">AS</span> min_score</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">  student;</span><br></pre></td></tr></table></figure>
+
+<h3 id="17-分组聚合-单子段分组"><a href="#17-分组聚合-单子段分组" class="headerlink" title="17-分组聚合-单子段分组"></a>17-分组聚合-单子段分组</h3><p>通常用<code>group by</code>关键字对数据分组，相当于是以什么为单位进行筛选</p>
+<p>SQL查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> class_id,<span class="built_in">avg</span>(score) <span class="keyword">as</span> avg_score <span class="keyword">from</span> student <span class="keyword">group</span> <span class="keyword">by</span> class_id;</span><br></pre></td></tr></table></figure>
+
+<h3 id="18-分组聚合-多字段分组"><a href="#18-分组聚合-多字段分组" class="headerlink" title="18-分组聚合-多字段分组"></a>18-分组聚合-多字段分组</h3><p>还是用<code>group by</code>关键字，只不过改成了2个变量（或两个以上）的排列组合</p>
+<blockquote>
+<p>假设有一个订单表 <code>orders</code>，包含以下字段：<code>order_id</code>（订单号）、<code>product_id</code>（商品编号）、<code>customer_id</code>（客户编号）、<code>amount</code>（订单金额）。</p>
+</blockquote>
+<p>数据如下：</p>
+<table>
+<thead>
+<tr>
+<th>order_id</th>
+<th>product_id</th>
+<th>customer_id</th>
+<th>amount</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>1</td>
+<td>A001</td>
+<td>100</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>A002</td>
+<td>200</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>A001</td>
+<td>150</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>A003</td>
+<td>50</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2</td>
+<td>A001</td>
+<td>50</td>
+</tr>
+</tbody></table>
+<p>要查询使用多字段分组查询表中 <strong>每个客户</strong> 购买的 <strong>每种商品</strong> 的总金额，相当于按照客户编号和商品编号分组：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 查询每个用户购买的每种商品的总金额，按照客户编号和商品编号分组</span></span><br><span class="line"><span class="keyword">SELECT</span> customer_id, product_id, <span class="built_in">SUM</span>(amount) <span class="keyword">AS</span> total_amount</span><br><span class="line"><span class="keyword">FROM</span> orders</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> customer_id, product_id;</span><br></pre></td></tr></table></figure>
+
+<p>查询结果：</p>
+<table>
+<thead>
+<tr>
+<th>customer_id</th>
+<th>product_id</th>
+<th>total_amount</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A001</td>
+<td>1</td>
+<td>250</td>
+</tr>
+<tr>
+<td>A001</td>
+<td>2</td>
+<td>50</td>
+</tr>
+<tr>
+<td>A002</td>
+<td>1</td>
+<td>200</td>
+</tr>
+<tr>
+<td>A003</td>
+<td>1</td>
+<td>50</td>
+</tr>
+</tbody></table>
+<h3 id="19-分组聚合-having子句"><a href="#19-分组聚合-having子句" class="headerlink" title="19-分组聚合-having子句"></a>19-分组聚合-having子句</h3><p><code>having子句</code>用于在分组聚合之后对分组进行条件过滤</p>
+<ul>
+<li><code>having</code>和<code>where</code>的区别在于，<code>where</code>是在分组前过滤，而<code>having</code>用于在分组后过滤</li>
+</ul>
+<p>SQL查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> class_id,<span class="built_in">sum</span>(score) <span class="keyword">as</span> sum_score <span class="keyword">from</span> student <span class="keyword">group</span> <span class="keyword">by</span> class_id <span class="keyword">having</span> <span class="built_in">sum</span>(score)<span class="operator">&gt;</span><span class="number">150</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="20-查询进阶-关联查询-cross-join"><a href="#20-查询进阶-关联查询-cross-join" class="headerlink" title="20-查询进阶-关联查询-cross join"></a>20-查询进阶-关联查询-cross join</h3><p><code>CROSS JOIN</code> 是一种简单的关联查询，不需要任何条件来匹配行，它直接将左表的 <strong>每一行</strong> 与右表的 <strong>每一行</strong> 进行组合，返回的结果是两个表的笛卡尔积。</p>
+<blockquote>
+<p> 假设有一个学生表 <code>student</code> ，包含以下字段：id（学号）、name（姓名）、age（年龄）、class_id（班级编号）；还有一个班级表 <code>class</code> ，包含以下字段：id（班级编号）、name（班级名称）。</p>
+</blockquote>
+<blockquote>
+<p> 请你编写一个 SQL 查询，将学生表和班级表的所有行组合在一起，并返回学生姓名（student_name）、学生年龄（student_age）、班级编号（class_id）以及班级名称（class_name）。</p>
+</blockquote>
+<p>SQL查询语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> s.name student_name, s.age student_age, s.class_id class_id, c.name class_name <span class="keyword">from</span> student s, class c;</span><br></pre></td></tr></table></figure>
+
+<h3 id="21-查询进阶-关联查询-inner-join"><a href="#21-查询进阶-关联查询-inner-join" class="headerlink" title="21-查询进阶-关联查询-inner join"></a>21-查询进阶-关联查询-inner join</h3><ul>
+<li>与<code>cross join</code>不同，<code>inner join</code>只返回两个表中满足关联条件的交集部分</li>
+</ul>
+<p>使用 INNER JOIN 进行关联查询，根据员工表和部门表之间的公共字段 <code>部门名称（department）</code> 进行匹配，将员工的姓名、工资以及所属部门和部门经理组合在一起：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> e.emp_name, e.salary, e.department, d.manager</span><br><span class="line"><span class="keyword">FROM</span> employees e</span><br><span class="line"><span class="keyword">JOIN</span> departments d <span class="keyword">ON</span> e.department <span class="operator">=</span> d.departmen</span><br></pre></td></tr></table></figure>
+
+<h3 id="22-查询进阶-关联查询-outer-join"><a href="#22-查询进阶-关联查询-outer-join" class="headerlink" title="22-查询进阶-关联查询-outer join"></a>22-查询进阶-关联查询-outer join</h3><p><code>outer join</code>分为 <code>left outer join</code>和 <code>right outer join</code>,允许将两个表中满足条件的行组合在一起，并 <strong>包含没有匹配的行</strong> ，赋值为Null</p>
+<h3 id="23-查询进阶-子查询"><a href="#23-查询进阶-子查询" class="headerlink" title="23-查询进阶-子查询"></a>23-查询进阶-子查询</h3><p><strong>子查询</strong>就是<strong>嵌套</strong>查询，示例如下：</p>
+<blockquote>
+<p>假设有一个学生表 <code>student</code>，包含以下字段：<code>id</code>（学号）、<code>name</code>（姓名）、<code>age</code>（年龄）、<code>score</code>（分数）、<code>class_id</code>（班级编号）。还有一个班级表 <code>class</code>，包含以下字段：<code>id</code>（班级编号）、<code>name</code>（班级名称）。</p>
+</blockquote>
+<blockquote>
+<p>请编写一个 SQL 查询，使用子查询的方式来获取存在对应班级的学生的所有数据，返回学生姓名（<code>name</code>）、分数（<code>score</code>）、班级编号（<code>class_id</code>）字段。</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name, score, class_id <span class="keyword">from</span> student <span class="keyword">where</span> class_id <span class="keyword">in</span> (<span class="keyword">select</span> <span class="keyword">distinct</span> id <span class="keyword">from</span> class);</span><br></pre></td></tr></table></figure>
+
+<h3 id="24-查询进阶-子查询-exists"><a href="#24-查询进阶-子查询-exists" class="headerlink" title="24-查询进阶-子查询-exists"></a>24-查询进阶-子查询-exists</h3><p>子查询中的一种特殊类型是 “<code>exists</code>“ 子查询，用于检查主查询的结果集是否存在满足条件的记录，它返回布尔值（True 或 False），而不返回实际的数据。</p>
+<blockquote>
+<p>假设有一个学生表 <code>student</code>，包含以下字段：<code>id</code>（学号）、<code>name</code>（姓名）、<code>age</code>（年龄）、<code>score</code>（分数）、<code>class_id</code>（班级编号）。还有一个班级表 <code>class</code>，包含以下字段：<code>id</code>（班级编号）、<code>name</code>（班级名称）。</p>
+<p>请编写一个 SQL 查询，使用 exists 子查询的方式来获取 <strong>不存在对应班级的</strong> 学生的所有数据，返回学生姓名（<code>name</code>）、年龄（<code>age</code>）、班级编号（<code>class_id</code>）字段。</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name, age, class_id <span class="keyword">from</span> student <span class="keyword">where</span> <span class="keyword">not</span> <span class="keyword">exists</span> (<span class="keyword">select</span> class_id <span class="keyword">from</span> class <span class="keyword">where</span> class.id <span class="operator">=</span> student.class_id);</span><br></pre></td></tr></table></figure>
+
+<h3 id="25-查询进阶-组合查询"><a href="#25-查询进阶-组合查询" class="headerlink" title="25-查询进阶-组合查询"></a>25-查询进阶-组合查询</h3><p>组合查询是一种将多个 SELECT 查询结果合并在一起的查询操作。</p>
+<p>包括两种常见的组合查询操作：union 和 union all</p>
+<ol>
+<li><code>union</code> 操作：它用于将两个或多个查询的结果集合并， <strong>并去除重复的行</strong> 。即如果两个查询的结果有相同的行，则只保留一行。</li>
+<li><code>union all</code> 操作：它也用于将两个或多个查询的结果集合并， <strong>但不去除重复的行</strong> 。即如果两个查询的结果有相同的行，则全部保留。</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- UNION ALL操作</span></span><br><span class="line"><span class="keyword">SELECT</span> name, age, department</span><br><span class="line"><span class="keyword">FROM</span> table1</span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span></span><br><span class="line"><span class="keyword">SELECT</span> name, age, department</span><br><span class="line"><span class="keyword">FROM</span> table2;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/MooSeQAQ/tuchuang@main/img/moose.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/MooSeQAQ/tuchuang@main/img/moose.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">MooSe</div><div class="post-copyright__author_desc">乐孜不疲，元气满满</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/2025/07/23/SQL%E5%AE%9E%E6%88%98%E9%97%AF%E5%85%B3%E7%BB%83%E4%B9%A0/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/2025/07/23/SQL%E5%AE%9E%E6%88%98%E9%97%AF%E5%85%B3%E7%BB%83%E4%B9%A0/')">SQL实战闯关练习</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/2025/07/23/SQL%E5%AE%9E%E6%88%98%E9%97%AF%E5%85%B3%E7%BB%83%E4%B9%A0/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=SQL实战闯关练习&amp;url=http://example.com/2025/07/23/SQL%E5%AE%9E%E6%88%98%E9%97%AF%E5%85%B3%E7%BB%83%E4%B9%A0/&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">MooSe的小窝</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/MooSeQAQ/tuchuang@main/img/moose.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2025/07/18/%E5%B0%9A%E7%A1%85%E8%B0%B7GIT/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">尚硅谷GIT</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/MooSeQAQ/tuchuang@main/img/moose.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/MooSeQAQ/tuchuang@main/img/studyinging.jpg" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这是<b style="color:#fff">MooSe</b>的BLOG,主要记录与<b style="color:#fff">CTF</b>相关的<b style="color:#fff">笔记</b>与心得</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">希望你可以在这里找到对你有用的<b style="color:#fff">灵感</b>和<b style="color:#fff">启发</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">MooSe</h1><div class="author-info__desc">乐孜不疲，元气满满</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/MooSeQAQ" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SQL%E5%AE%9E%E6%88%98%E9%97%AF%E5%85%B3%E7%BB%83%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">SQL实战闯关练习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E7%BA%BF%E5%85%B3%E5%8D%A1"><span class="toc-number">1.1.</span> <span class="toc-text">主线关卡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%9F%A5%E8%AF%A2-%E5%85%A8%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.1.1.</span> <span class="toc-text">1-基础语法-查询-全表查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%9F%A5%E8%AF%A2-%E9%80%89%E6%8B%A9%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.1.2.</span> <span class="toc-text">2-基础语法-查询-选择查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%9F%A5%E8%AF%A2-%E5%88%AB%E5%90%8D"><span class="toc-number">1.1.3.</span> <span class="toc-text">3-基础语法-查询-别名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%9F%A5%E8%AF%A2-%E5%B8%B8%E9%87%8F%E5%92%8C%E8%BF%90%E7%AE%97"><span class="toc-number">1.1.4.</span> <span class="toc-text">4-基础语法-查询-常量和运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2-where"><span class="toc-number">1.1.5.</span> <span class="toc-text">5-基础语法-条件查询-where</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2-%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.1.6.</span> <span class="toc-text">6-基础语法-条件查询-运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2-%E7%A9%BA%E5%80%BC"><span class="toc-number">1.1.7.</span> <span class="toc-text">7-基础语法-条件查询-空值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2-%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.1.8.</span> <span class="toc-text">8-基础语法-条件查询-模糊查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2-%E9%80%BB%E8%BE%91%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.1.9.</span> <span class="toc-text">9-基础语法-条件查询-逻辑查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E5%8E%BB%E9%87%8D-distinct"><span class="toc-number">1.1.10.</span> <span class="toc-text">10-基础语法-去重-distinct</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%8E%92%E5%BA%8F"><span class="toc-number">1.1.11.</span> <span class="toc-text">11-基础语法-排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%88%AA%E6%96%AD%E5%92%8C%E5%81%8F%E7%A7%BB"><span class="toc-number">1.1.12.</span> <span class="toc-text">12-基础语法-截断和偏移</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95-%E6%9D%A1%E4%BB%B6%E5%88%86%E6%94%AF"><span class="toc-number">1.1.13.</span> <span class="toc-text">13-基础语法-条件分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E5%87%BD%E6%95%B0-%E6%97%B6%E9%97%B4%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.14.</span> <span class="toc-text">14-函数-时间函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-%E5%87%BD%E6%95%B0-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86"><span class="toc-number">1.1.15.</span> <span class="toc-text">15-函数-字符串处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-%E5%87%BD%E6%95%B0-%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.16.</span> <span class="toc-text">16-函数-聚合函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-%E5%88%86%E7%BB%84%E8%81%9A%E5%90%88-%E5%8D%95%E5%AD%90%E6%AE%B5%E5%88%86%E7%BB%84"><span class="toc-number">1.1.17.</span> <span class="toc-text">17-分组聚合-单子段分组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-%E5%88%86%E7%BB%84%E8%81%9A%E5%90%88-%E5%A4%9A%E5%AD%97%E6%AE%B5%E5%88%86%E7%BB%84"><span class="toc-number">1.1.18.</span> <span class="toc-text">18-分组聚合-多字段分组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-%E5%88%86%E7%BB%84%E8%81%9A%E5%90%88-having%E5%AD%90%E5%8F%A5"><span class="toc-number">1.1.19.</span> <span class="toc-text">19-分组聚合-having子句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20-%E6%9F%A5%E8%AF%A2%E8%BF%9B%E9%98%B6-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2-cross-join"><span class="toc-number">1.1.20.</span> <span class="toc-text">20-查询进阶-关联查询-cross join</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-%E6%9F%A5%E8%AF%A2%E8%BF%9B%E9%98%B6-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2-inner-join"><span class="toc-number">1.1.21.</span> <span class="toc-text">21-查询进阶-关联查询-inner join</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22-%E6%9F%A5%E8%AF%A2%E8%BF%9B%E9%98%B6-%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2-outer-join"><span class="toc-number">1.1.22.</span> <span class="toc-text">22-查询进阶-关联查询-outer join</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23-%E6%9F%A5%E8%AF%A2%E8%BF%9B%E9%98%B6-%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.1.23.</span> <span class="toc-text">23-查询进阶-子查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24-%E6%9F%A5%E8%AF%A2%E8%BF%9B%E9%98%B6-%E5%AD%90%E6%9F%A5%E8%AF%A2-exists"><span class="toc-number">1.1.24.</span> <span class="toc-text">24-查询进阶-子查询-exists</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#25-%E6%9F%A5%E8%AF%A2%E8%BF%9B%E9%98%B6-%E7%BB%84%E5%90%88%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.1.25.</span> <span class="toc-text">25-查询进阶-组合查询</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/07/23/SQL%E5%AE%9E%E6%88%98%E9%97%AF%E5%85%B3%E7%BB%83%E4%B9%A0/" title="SQL实战闯关练习">SQL实战闯关练习</a><time datetime="2025-07-23T07:06:15.000Z" title="发表于 2025-07-23 15:06:15">2025-07-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/07/18/%E5%B0%9A%E7%A1%85%E8%B0%B7GIT/" title="尚硅谷GIT">尚硅谷GIT</a><time datetime="2025-07-18T02:53:31.000Z" title="发表于 2025-07-18 10:53:31">2025-07-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/07/16/comeback/" title="comeback">comeback</a><time datetime="2025-07-16T03:27:33.000Z" title="发表于 2025-07-16 11:27:33">2025-07-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/09/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%C2%B7%E4%BF%A1%E5%91%BCOA%EF%BC%88CVE-2023-1773%EF%BC%89/" title="第一次代码审计·信呼OA（CVE-2023-1773）">第一次代码审计·信呼OA（CVE-2023-1773）</a><time datetime="2024-08-09T12:23:52.000Z" title="发表于 2024-08-09 20:23:52">2024-08-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/02/%E5%8F%8D%E5%BC%B9shell/" title="反弹shell">反弹shell</a><time datetime="2024-08-02T14:29:39.000Z" title="发表于 2024-08-02 22:29:39">2024-08-02</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="MooSe" target="_blank">MooSe</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">29</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">0</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 留言板</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 随便逛逛</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CTF-Web/" style="font-size: 0.88rem;">CTF-Web<sup>1</sup></a><a href="/tags/Docker%E5%A4%8D%E7%8E%B0/" style="font-size: 0.88rem;">Docker复现<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>1</sup></a><a href="/tags/Web-SSRF/" style="font-size: 0.88rem;">Web-SSRF<sup>1</sup></a><a href="/tags/Web-awd/" style="font-size: 0.88rem;">Web-awd<sup>1</sup></a><a href="/tags/Web-%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/" style="font-size: 0.88rem;">Web-文件包含<sup>1</sup></a><a href="/tags/ctfshow/" style="font-size: 0.88rem;">ctfshow<sup>2</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 0.88rem;">前端<sup>2</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 0.88rem;">数据库<sup>1</sup></a><a href="/tags/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/" style="font-size: 0.88rem;">文件包含<sup>1</sup></a><a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 0.88rem;">比赛<sup>1</sup></a></div></div><hr/></div></div><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keybordList"><div class="keybordItem"><div class="keyGroup"><div class="key">shift K</div></div><div class="keyContent"><div class="content">关闭快捷键功能</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift A</div></div><div class="keyContent"><div class="content">打开/关闭中控台</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift D</div></div><div class="keyContent"><div class="content">深色/浅色显示模式</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift S</div></div><div class="keyContent"><div class="content">站内搜索</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift R</div></div><div class="keyContent"><div class="content">随机访问</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift H</div></div><div class="keyContent"><div class="content">返回首页</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift F</div></div><div class="keyContent"><div class="content">友链鱼塘</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift L</div></div><div class="keyContent"><div class="content">友链页面</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift P</div></div><div class="keyContent"><div class="content">关于本站</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift I</div></div><div class="keyContent"><div class="content">原版/本站右键菜单</div></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 MooSe 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script id="click-show-text" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="false" data-text="MISC,WEB,PWN,REVERSE,CRYPTO,PPC,STRGA" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
